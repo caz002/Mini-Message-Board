@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <nav>
+        <ul>
+          <% for (let i = 0; i < links.length; i++) { %>
+            <li>
+              <a href="<%= links[i].href %>">
+                <span> <%= links[i].text %> </span>
+              </a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+    <ul>
+        <% messages.forEach((message) => { %>
+          <%- include('message', {message: message}); %>
+        <% }); %>
+      </ul>
+  </body>
+</html>
