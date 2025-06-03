@@ -1,10 +1,18 @@
-<div>
-    <div>New Message</div>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Add a New Message</title>
+    </head>    
+  <body>
+    <div class="title">New Message</div>
+    <div class="container">
     <form method="POST" action="/new">
-        <label for="messageText">Text:</label>
-        <input type="text" id="messageText" name="messageText"><br><br>
-        <label for="messageUser">User:</label>
+        <label for="messageUser">Username:</label>
         <input type="text" id="messageUser" name="messageUser"><br><br>
-        <input type="submit" value="Submit">
+        <label for="messageText">Text:</label>
+        <input type="text" style="width:100%" id="messageText" name="messageText" placeholder="Write message here..."><br><br>
+        <input class="button" type="submit" value="Submit">
       </form>
-</div>
+    </div>
+</body>
+</html>

@@ -1,20 +1,19 @@
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Message Board</title>
+    </head>    
   <body>
-    <nav>
-        <ul>
-          <% for (let i = 0; i < links.length; i++) { %>
-            <li>
-              <a href="<%= links[i].href %>">
-                <span> <%= links[i].text %> </span>
-              </a>
-            </li>
-          <% } %>
-        </ul>
-      </nav>
-    <ul>
+    <div class="title">Message Board</div>
+    <div style="display:flex;flex-direction:row-reverse;">
+        <a class="button" href="<%= links[0].href %>">
+             <span> <%= links[0].text %> </span>
+        </a>
+    </div>
+    <div class="container">
         <% messages.forEach((message) => { %>
           <%- include('message', {message: message}); %>
         <% }); %>
-      </ul>
+    </div>
   </body>
 </html>
